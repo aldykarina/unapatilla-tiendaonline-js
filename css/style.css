@@ -1,0 +1,390 @@
+@import url("https://fonts.googleapis.com/css2?family=Lemonada:wght@300;400;500;600;700&display=swap");
+
+/*-----Generales-----*/
+html{
+    font-size: 62.5%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lemonada", cursive; }
+
+/*------HEADER------*/
+
+header{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.966); 
+}
+
+header nav{
+    border-bottom: 2px solid;
+    border-color: #0000001a;
+    border-radius: 0px 0px 20px 20px;
+    box-shadow: 3px 3px 10px #0000001a;
+    padding: 1px;
+    font-size: 1.5rem;
+}
+
+.botonRosa{
+    text-decoration: none;
+    color: white ;
+    background-color: #E01F32;
+    padding: 2px 15px 2px 15px ;
+    border-radius: 20px;
+    font-size: 1.5rem;
+}
+
+.botonRosa:hover{
+    color: white;
+    background-color: #61D055;
+}
+
+.navbar-brand{
+    transition: 0.5s ease all;
+}
+
+.navbar-brand:hover{
+    transform: scale(1.05);
+}
+
+.botonGris thead tr th{
+    padding: 0px 0px 0px 20px;
+    width: 100%;
+    color: #7F1C24;
+    border-bottom: 2px solid rgba(128, 128, 128, 0.255);
+}
+
+.submenu{
+    position: relative;
+    font-size: 1.2rem;
+}
+
+.submenu div{
+    border-top: 2px solid rgba(128, 128, 128, 0.255);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.submenu p{
+    padding: 15px;
+    border-top: 2px solid rgba(128, 128, 128, 0.255);
+    font-size: 1.3rem;
+}
+
+.imgCart{
+    width: 80%;
+}
+
+/* cambiar -----------------------------------------------------************ */
+.submenu {
+    position: relative;
+}
+
+#carrito{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    display: none;
+    height: 500px;
+    overflow: auto;
+}
+
+#carrito.open{
+    display: block;
+}
+
+.closeButton {
+    position: fixed;
+    top: 61px;
+    right:6px;
+    background-color: #E01F32;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 0.7rem;
+}
+
+.closeButton:hover{
+    background-color: rgba(0, 0, 0, 0.365);
+    color: white;
+
+}
+
+
+/* .submenu #carrito{
+    display: none;
+}
+
+.submenu:hover #carrito{
+    display: block;
+    position: absolute;
+    background-color: white;
+    right: 0;
+    top: 100%;
+    z-index: 1;
+    min-height: 400px;
+    min-width: 300px;
+} */
+
+.cantidad{
+    width: 40px;
+}
+
+.imgCarrito{
+    cursor: pointer;
+}
+
+.nombre{
+    padding-right: 20px;
+}
+  
+#contadorCarrito {
+    position: absolute;
+    top: 22px;
+    right: 28px;
+    color: #fff;
+    border-radius: 50%;
+    padding: 5px 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.botonesCarritos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.irComprar{
+    text-decoration: none;
+    text-align: center;
+    color: #61D055;
+    font-size: 2rem;
+    padding: 10px;
+}
+
+.botonVaciar{
+    text-decoration: none;
+    text-align: center;
+    color: gray;
+    font-size: 1rem;
+    padding: 20px;
+}
+
+
+/*------Almacen------*/
+
+.almacen{
+    display: flex;
+    justify-content: stretch;
+}
+
+.almacenTitulo{
+    background-color:#E01F32;
+    padding: 20px;
+    margin: 5px;
+    color: white;
+}
+
+.almacenTitulo h1{
+    font-size: 2rem;
+}
+
+.almacenTitulo p{
+    text-align: justify;
+    font-size: 1.4rem;
+}
+
+.almacenProductos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 10px;
+    margin: 5px
+}
+
+.almacenProductos div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.almacenProductos div a img{
+    width: 350px;
+}
+
+.almacenProductos div h2{
+    padding: 0px 0px 0px 20px;
+    font-size: 2rem;
+    width: 100%;
+}
+
+.almacenProductos div p{
+    background-color: #61d0553f;
+    border-radius: 10px;
+    padding: 5px 0px 5px 20px;
+    font-size: 1.5rem;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+
+
+.almacenProductos div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.almacenProductos div a img{
+    width: 350px;
+}
+
+.botonCompra{
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    padding: 2px 15px 2px 15px ;
+    border-radius: 5px;
+    border: 1px solid;
+    border-color: rgba(0, 0, 0, 0.423);
+    width: 100%;
+    margin-top: 5px;
+    font-size: 1.5rem;
+}
+
+.botonCompra:hover{
+    color: #ffffff;
+    background-color: #E01F32;
+    font-weight: 600;   
+}
+
+/*------Formulario------*/
+.formulario{
+    display: none;
+    margin: 150px 50px;
+    background-color: rgba(230, 230, 230, 0.079);
+    padding: 30px;
+    font-size: 1.3rem;
+
+}
+
+.formulario fieldset{
+    padding: 20px;
+    border: 1px solid #61d055ad ;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: initial;
+    justify-content: space-around;
+}
+
+.formulario fieldset legend{
+    font-size: 1.8rem;
+}
+
+.formulario fieldset div{
+    padding: 10px;
+}
+
+.formulario fieldset div h3{
+    font-size: 1.3rem;
+}
+
+.formulario .datosContacto{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.formulario fieldset div textarea{
+    width: 100%;
+}
+
+.formulario fieldset div input{
+    padding: 10px;
+    margin: 5px;
+}
+
+/*------Footer------*/
+
+.footerLogos{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    background-color: #E01F32;
+    margin: 5px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 10px #00000062;
+}
+
+.footerLogos a img{
+    height: 40px;
+    margin: 10px;
+    transition: 0.5s ease all;
+}
+
+.footerLogos a img:hover{
+    transform: scale(1.1);
+}
+
+.footerLogosContactanos{
+    display: flex;
+    align-items: center;
+}
+
+.footerLogosContactanos img{
+    height: 30px;
+}
+
+.footerLogosContactanos a{
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+}
+
+.logoFinal{
+    display: flex;
+    justify-content: center;
+}
+
+.logoFinal a img{
+    height: 20px;
+}
+
+
+/* --------------------media queries---------------------*/
+
+@media screen and (max-width: 1190px){
+    .almacenProductos div a img{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 890px){
+    .almacen{
+        flex-direction: column;
+    }
+    .almacenTitulo p {
+        font-size: 1rem;
+    }
+
+}

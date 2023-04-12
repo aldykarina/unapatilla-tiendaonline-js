@@ -1,0 +1,47 @@
+[
+    {
+        "titulo": "Almohada",
+        "precio": 3000,
+        "img": "producto1.png"
+    },
+    {
+        "titulo": "Cuadro",
+        "precio": 2000,
+        "img": "producto2.png"
+    },
+    {
+        "titulo": "Globo",
+        "precio": 800,
+        "img": "producto3.png"
+    },
+    {
+        "titulo": "Identificador Maletas",
+        "precio": 1500,
+        "img": "producto4.png"
+    },
+    {
+        "titulo": "Posa vasos",
+        "precio": 800,
+        "img": "producto5.png"
+    },
+    {
+        "titulo": "Mantelito",
+        "precio": 500,
+        "img": "producto6.png"
+    },
+    {
+        "titulo": "Aretes",
+        "precio": 2000,
+        "img": "producto7.png"
+    },
+    {
+        "titulo": "Collar",
+        "precio": 2000,
+        "img": "producto8.png"
+    },
+    {
+        "titulo": "Pulsera",
+        "precio": 1000,
+        "img": "producto9.png"
+    }
+]

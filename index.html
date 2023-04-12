@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="sandia, patilla, regalos, souvenirs, objetos, watermelon, fruta, verano, almacen, comprar, almohada, cuadro, globo, identificador, aretes, collar, pulsera">
+    <meta name="description" content="Somo la tienda de regalo mas original de sandias. Lo que buscabas, encuentralo por acá.">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Almacen | Regalos originales de sandia </title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container-fluid">
+                <div class="text-decoration-none me-lg-5 pe-lg-5">
+                    <ul class="list-unstyled fw-bold pt-3">
+                        <li><a class="botonRosa" href="#">   Productos   </a></li>
+                    </ul>
+                </div>
+                <a class="navbar-brand" href="./index.html"><img src="./img/navlogo.png" alt="unapatilla"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fs-6"></span>
+                </button>
+                <div class="collapse navbar-collapse flex-grow-0" id="navbarNav">
+                    <ul class="navbar-nav fw-bold align-items-center navbarBoton">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contactanos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Conocenos</a>
+                        </li>
+                        <li class="nav-item submenu posicionRelativa">
+                            <a class="nav-link" href="#"><img src="./img/navCompra.png" alt="carritodecompras" class="imgCarrito"></a>
+                            <span id="contadorCarrito">0</span>
+                            <div id="carrito">
+                                <button class="closeButton">X</button>
+                                <table id="listaCarrito" class="botonGris">
+                                    <thead>
+                                        <tr>
+                                            <th> Imagen </th>
+                                            <th> Nombre </th>
+                                            <th> Precio </th>
+                                            <th> Cantidad </th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        
+                                    </tbody>
+                                </table>
+                                <p id="totalCarrito">Total: $ 0.00</p>
+                                <div class = "botonesCarritos">
+                                    <a href="#" class="irComprar">Finalizar Compra</a>
+                                    <a href="#" id="vaciarCarrito" class="botonVaciar">Vaciar Carrito</a>
+                                </div>
+                            </div>
+
+                        </li>                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="almacen">
+            <section class="almacenTitulo">
+                <h1>Almacén de artículos</h1>
+                <p>¿Emoción por la sandia? Nosotros también. Encuentra acá los mejores artículos de sandía, siempre estamos en buscas de alguno nuevo. ¡No te pierdas!.</p>
+            </section> 
+
+            <section id="listaProductos" class="almacenProductos">
+
+            </section>
+        </div>
+        <section class="formulario">
+            <form action="" novalidate></form>
+                 <fieldset>
+                    <legend>Confirmación del Pedido</legend>                    
+                    <div class="datosContacto">
+                        <div>
+                            <label for="nombre">Nombre y Apellido</label>
+                            <input type="text" name="nombre" required>
+                        </div>
+                        <div>
+                            <label for="mail">Correo electrónico</label>
+                            <input type="email" name="mail" required>
+                        </div>
+                        <div>
+                            <label for="tel">Telefóno</label>
+                            <input type="tel" name="phone" required>
+                        </div>                        
+                    </div>
+                    <div> 
+                        <h3>Método de Pago</h3>
+                        <select name="tipo" required>
+                            <option value="tipo">Efectivo</option>
+                            <option value="pago">Transferencia</option>
+                            <option value="devolucion">Mercadopago</option>
+                        </select>
+                    </div>
+                    <div>
+                        <h3>¿Alguna observación de tu pedido?</h3>
+                        <textarea name="observaciones" id="" cols="50" rows="10"></textarea>
+                    </div>
+
+                    <input type="submit" class="botonRosa">
+                </fieldset>
+            </form>
+
+
+<!--             <form class="row g-3 needs-validation" novalidate>
+                <div class="col-md-4">
+                  <label for="validationCustom01" class="form-label">Nombre</label>
+                  <input type="text" class="form-control" id="validationCustom01" required>
+                  <div class="valid-feedback">
+                    ok
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <label for="validationCustom02" class="form-label">Apellido</label>
+                  <input type="text" class="form-control" id="validationCustom02" required>
+                  <div class="valid-feedback">
+                    ok
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <label for="validationCustomEmail" class="form-label">Correo Electrónico</label>
+                  <div class="input-group has-validation">
+                    <input type="email" class="form-control" id="validationCustonEmail" name="mail" aria-describedby="inputGroupPrepend" required>
+                    <div class="invalid-feedback">
+                      Por favor, ingrese un correo electrónic 
+                  </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="validationCustomPhone" class="form-label">Teléfono</label>
+                    <div class="input-group has-validation">
+                      <input type="tel" class="form-control" id="validationCustomPhone" name="phone" aria-describedby="inputGroupPrepend" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                      <div class="invalid-feedback">
+                        Por favor, ingrese un correo electrónic 
+                    </div>
+                  </div>
+                <div class="col-md-6">
+                  <label for="validationCustom03" class="form-label">Dirección</label>
+                  <input type="text" class="form-control" id="validationCustom03" required>
+                  <div class="invalid-feedback">
+                    Por favor ingrese dirección
+                  </div>
+                </div>
+                <div class="col-md-3">
+                    <label for="validationCustom05" class="form-label">Código Postal</label>
+                    <input type="text" class="form-control" id="validationCustom05" required>
+                    <div class="invalid-feedback">
+                        Por favor ingrese Código Postal
+                    </div>
+                </div>
+                <div class="col-md-3">
+                  <label for="validationCustom04" class="form-label">Método de pago</label>
+                  <select class="form-select" id="validationCustom04" required>
+                    <option selected disabled value="">Método de Pago</option>
+                    <option>Efectivo</option>
+                    <option>Transferencia</option>
+                    <option>Mercadopago</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Por favor selecciones método de pago
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-primary" type="submit">Enviar</button>
+                </div>
+            </form> -->
+        </section>
+
+    </main>
+    <footer>
+        <section class="footerLogos">
+            <div class="footerLogosRedes">
+                <a href="https://www.instagram.com/unapatilla/" target="_blank"><img src="./img/instagram.png" alt="instagram"></a>
+                <a href="mailto:unapatilla@gmail.com" target="_blank"><img src="./img/gmail.png" alt="email"><a>
+                <a href="https://wa.me/" target="_blank"><img src="./img/whatsapp.png" alt="whatsaap"></a>
+            </div>
+            <div class="footerLogosContactanos">
+                <img src="./img/questions.png" alt="contactanos">
+                <a href="">Contactanos</a>
+            </div>
+        </section>
+        <section class="logoFinal">
+            <a href=""><img src="./img/footerlogofinal500x100.png" alt="unapatilla"></a>
+        </section>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="./pages/app.js"></script>
+</body>
+</html>
