@@ -74,106 +74,105 @@
             </section> 
 
             <section id="listaProductos" class="almacenProductos">
-
             </section>
         </div>
-        <section class="formulario">
-            <form action="" novalidate></form>
-                 <fieldset>
-                    <legend>Confirmación del Pedido</legend>                    
-                    <div class="datosContacto">
-                        <div>
-                            <label for="nombre">Nombre y Apellido</label>
-                            <input type="text" name="nombre" required>
-                        </div>
-                        <div>
-                            <label for="mail">Correo electrónico</label>
-                            <input type="email" name="mail" required>
-                        </div>
-                        <div>
-                            <label for="tel">Telefóno</label>
-                            <input type="tel" name="phone" required>
-                        </div>                        
-                    </div>
-                    <div> 
-                        <h3>Método de Pago</h3>
-                        <select name="tipo" required>
-                            <option value="tipo">Efectivo</option>
-                            <option value="pago">Transferencia</option>
-                            <option value="devolucion">Mercadopago</option>
-                        </select>
-                    </div>
-                    <div>
-                        <h3>¿Alguna observación de tu pedido?</h3>
-                        <textarea name="observaciones" id="" cols="50" rows="10"></textarea>
-                    </div>
-
-                    <input type="submit" class="botonRosa">
-                </fieldset>
-            </form>
 
 
-<!--             <form class="row g-3 needs-validation" novalidate>
-                <div class="col-md-4">
-                  <label for="validationCustom01" class="form-label">Nombre</label>
-                  <input type="text" class="form-control" id="validationCustom01" required>
-                  <div class="valid-feedback">
-                    ok
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <label for="validationCustom02" class="form-label">Apellido</label>
-                  <input type="text" class="form-control" id="validationCustom02" required>
-                  <div class="valid-feedback">
-                    ok
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <label for="validationCustomEmail" class="form-label">Correo Electrónico</label>
-                  <div class="input-group has-validation">
-                    <input type="email" class="form-control" id="validationCustonEmail" name="mail" aria-describedby="inputGroupPrepend" required>
+        <section class="formulario" id="formularioCompra">
+            <div class="py-5 text-center">
+                <h2>Finalizar Compra</h2>
+                <p class="lead">Por favor completar los siguientes datos</p>
+            </div>
+            <div class="row g-5">
+                <div class="col-md-5 col-lg-4 order-md-last">
+                    <h4 class="mb-3">Comentarios acerca del producto</h4>
+                    <small class="text-muted">Si tiene algun comentario adicional para tomar en cuenta sobre el producto puede dejarlo por acá, gracias!</small>
+                    <textarea name=""class="form-control" id="" cols="30" rows="10" placeholder="" required></textarea>
                     <div class="invalid-feedback">
-                      Por favor, ingrese un correo electrónic 
-                  </div>
-                </div>
-                <div class="col-md-4">
-                    <label for="validationCustomPhone" class="form-label">Teléfono</label>
-                    <div class="input-group has-validation">
-                      <input type="tel" class="form-control" id="validationCustomPhone" name="phone" aria-describedby="inputGroupPrepend" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
-                      <div class="invalid-feedback">
-                        Por favor, ingrese un correo electrónic 
-                    </div>
-                  </div>
-                <div class="col-md-6">
-                  <label for="validationCustom03" class="form-label">Dirección</label>
-                  <input type="text" class="form-control" id="validationCustom03" required>
-                  <div class="invalid-feedback">
-                    Por favor ingrese dirección
-                  </div>
-                </div>
-                <div class="col-md-3">
-                    <label for="validationCustom05" class="form-label">Código Postal</label>
-                    <input type="text" class="form-control" id="validationCustom05" required>
-                    <div class="invalid-feedback">
-                        Por favor ingrese Código Postal
+                         Security code required
                     </div>
                 </div>
-                <div class="col-md-3">
-                  <label for="validationCustom04" class="form-label">Método de pago</label>
-                  <select class="form-select" id="validationCustom04" required>
-                    <option selected disabled value="">Método de Pago</option>
-                    <option>Efectivo</option>
-                    <option>Transferencia</option>
-                    <option>Mercadopago</option>
-                  </select>
-                  <div class="invalid-feedback">
-                    Por favor selecciones método de pago
-                  </div>
+            
+
+                <div class="col-md-7 col-lg-8">
+                    <h4 class="mb-3">Dirección de facturación</h4>
+                    <form class="needs-validation" novalidate>
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <label for="firstName" class="form-label">Nombre</label>
+                                <input type="text" class="form-control inputObligatorio" id="firstName" placeholder="" value="" required>
+                                <div class="invalid-feedback">
+                                    Valid first name is required.
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <label for="lastName" class="form-label">Apellido</label>
+                                <input type="text" class="form-control inputObligatorio" id="lastName" placeholder="" value="" required>
+                                <div class="invalid-feedback">
+                                    Valid last name is required.
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
+                                <input type="email" class="form-control inputObligatorio" id="email" placeholder="you@gmail.com" value="" required >
+                                <div class="invalid-feedback">
+                                    Please enter a valid email address for shipping updates.
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="address" class="form-label">Dirección</label>
+                                <input type="text" class="form-control inputObligatorio" id="address" placeholder="Calle 1234 Ciudad" value=""  required>
+                                <div class="invalid-feedback">
+                                    Please enter your shipping address.
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <label for="zip" class="form-label">Código Postal</label>
+                                <input type="text" class="form-control inputObligatorio" id="zip" placeholder="" value="" required>
+                                <div class="invalid-feedback">
+                                    Zip code required.
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr class="my-4">
+
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="same-address">
+                            <label class="form-check-label" for="same-address">La dirección de entrega es la misma de factuación</label>
+                        </div>
+
+                        <hr class="my-4">
+
+                        <h4 class="mb-3">Método de pago</h4>
+
+                        <div class="my-3">
+                            <div class="form-check">
+                                <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
+                                <label class="form-check-label" for="credit">Efectivo</label>
+                            </div>
+                            <div class="form-check">
+                                <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+                                <label class="form-check-label" for="debit">Transferencia</label>
+                            </div>
+                            <div class="form-check">
+                                <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
+                                <label class="form-check-label" for="paypal">Mercadopago</label>
+                            </div>
+                        </div>
+
+                        <hr class="my-4">
+
+                        <button class="w-100 btn btn-primary btn-lg botonProductoCompra" type="submit">Enviar</button>
+                        <button class="botonProductoCarrito" type="reset" >Limpiar formulario</button>
+                    </form>
                 </div>
-                <div class="col-12">
-                  <button class="btn btn-primary" type="submit">Enviar</button>
-                </div>
-            </form> -->
+            </div>
+            
         </section>
 
     </main>
@@ -197,5 +196,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="./pages/app.js"></script>
+    
+    
 </body>
 </html>

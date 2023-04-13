@@ -77,7 +77,6 @@ function closeCart(evt) {
 
 
 
-
 function alerta (){
     Toastify({
         text: "producto agregado al carrito",     
@@ -293,8 +292,62 @@ finalizarCompra.addEventListener("click", formulario)
 
 function formulario(evt){
   evt.preventDefault()
+  closeCart()
   formularioHtml.style.display = 'block'
   formularioHtml.scrollIntoView({behavior: "smooth"})
-} 
+}; 
+
+
+
+/* const submitFormulario = document.querySelector(".botonProductoCompra")
+let todosInputs = document.querySelectorAll(".inputObligatorio")
+submitFormulario.addEventListener("click", validarForm)
+
+
+
+function validarForm() {
+  if (todosInputs !== ""){
+    Swal.fire({
+      position: 'top-end',
+      icon: 'success',
+      title: 'Gracias por compra en unapatilla',
+      showConfirmButton: false,
+      timer:2500
+    })
+  } else {
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Por favor completa todo los campos solicitados',
+    })
+  }
+  
+} */
+
+const form = document.querySelector('.needs-validation');
+const inputs = document.querySelectorAll('.inputObligatorio');
+
+form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    inputs.forEach(input => {
+        if (!input.value.trim()) {
+            input.classList.add('is-invalid');
+            //input.nextElementSibling.classList.add('invalid-feedback');
+            //input.nextElementSibling.innerText = 'Este campo es obligatorio';
+        } else {
+            input.classList.remove('is-invalid');
+            input.nextElementSibling.classList.remove('invalid-feedback');
+
+            Swal.fire({
+
+              icon: 'success',
+              title: 'Gracias por comprar en unapatilla',
+              footer: '<p>Nos estaremos comunicando por mail para concretar el pago y coordinar el envio.</p>',
+              showConfirmButton: true
+            })
+
+        }
+    });
+});
 
 

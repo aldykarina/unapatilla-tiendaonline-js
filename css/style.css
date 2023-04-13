@@ -50,6 +50,16 @@ header nav{
     transition: 0.5s ease all;
 }
 
+.navbar-nav {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    flex-wrap: wrap;
+    align-content: end;
+}
+
 .navbar-brand:hover{
     transform: scale(1.05);
 }
@@ -80,6 +90,7 @@ header nav{
 .imgCart{
     width: 80%;
 }
+
 
 /* cambiar -----------------------------------------------------************ */
 .submenu {
@@ -225,12 +236,12 @@ header nav{
 }
 
 .almacenProductos div a img{
-    width: 350px;
+    width: 330px;
 }
 
 .almacenProductos div h2{
     padding: 0px 0px 0px 20px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     width: 100%;
 }
 
@@ -238,11 +249,14 @@ header nav{
     background-color: #61d0553f;
     border-radius: 10px;
     padding: 5px 0px 5px 20px;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     width: 100%;
     margin-bottom: 0;
 }
 
+.almacenProductos div a{
+    font-size: 1.3rem;
+}
 
 
 .almacenProductos div{
@@ -253,7 +267,7 @@ header nav{
 }
 
 .almacenProductos div a img{
-    width: 350px;
+    width: 330px;
 }
 
 .botonCompra{
@@ -278,9 +292,9 @@ header nav{
 /*------Formulario------*/
 .formulario{
     display: none;
-    margin: 150px 50px;
+    margin: 100px 50px;
     background-color: rgba(230, 230, 230, 0.079);
-    padding: 30px;
+    padding: 20px;
     font-size: 1.3rem;
 
 }
@@ -322,6 +336,29 @@ header nav{
     padding: 10px;
     margin: 5px;
 }
+
+.botonProductoCompra {
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    background-color: #E01F32;
+    padding: 2px 15px 2px 15px;
+    border-radius: 10px;
+    width: 300px; 
+}
+
+.botonProductoCarrito{
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    padding: 2px 15px 2px 15px;
+    border-radius: 10px;
+    border: 1px solid;
+    border-color: black;
+    width: 300px;
+    margin-top: 5px; 
+}
+
 
 /*------Footer------*/
 
@@ -385,6 +422,12 @@ header nav{
     }
     .almacenTitulo p {
         font-size: 1rem;
+    }
+    .almacenProductos div a{
+        font-size: 1rem;
+    }
+    .almacenProductos div a img{
+        width: 150px;
     }
 
 }
