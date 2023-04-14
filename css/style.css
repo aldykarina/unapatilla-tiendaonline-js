@@ -91,8 +91,6 @@ header nav{
     width: 80%;
 }
 
-
-/* cambiar -----------------------------------------------------************ */
 .submenu {
     position: relative;
 }
@@ -116,9 +114,9 @@ header nav{
 }
 
 .closeButton {
-    position: fixed;
-    top: 61px;
-    right:6px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
     background-color: #E01F32;
     color: white;
     border: none;
@@ -133,22 +131,6 @@ header nav{
     color: white;
 
 }
-
-
-/* .submenu #carrito{
-    display: none;
-}
-
-.submenu:hover #carrito{
-    display: block;
-    position: absolute;
-    background-color: white;
-    right: 0;
-    top: 100%;
-    z-index: 1;
-    min-height: 400px;
-    min-width: 300px;
-} */
 
 .cantidad{
     width: 40px;

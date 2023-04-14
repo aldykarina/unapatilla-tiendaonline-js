@@ -4,7 +4,6 @@ let valorAnterior = 0;
 const contenedorCarrito = document.querySelector('#listaCarrito tbody');
 
 
-
 document.addEventListener('DOMContentLoaded', () => {
 
   fetch("./pages/data.json")
@@ -82,8 +81,8 @@ function alerta (){
         text: "producto agregado al carrito",     
         duration: 700,
         offset: {
-            x: 15, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
-            y: 55 // vertical axis - can be a number or a string indicating unity. eg: '2em'
+            x: 15, 
+            y: 55 
         },
         style:{
             background: "white",
@@ -132,13 +131,12 @@ function agregarProducto(evento) {
   const boton = evento.target;
   const producto = boton.parentElement;
 
-  //NUEVO
   const productosDatos = {
     nombre: producto.querySelector('h2').innerText,
     imagen: producto.querySelector('img').src,
     precio: producto.querySelector('.precio').innerText,
     cantidad: 1
-    }
+  }
   
   // buscar si el producto ya existe en el carrito
   const productosEnCarrito = contenedorCarrito.querySelectorAll('tr');
@@ -298,32 +296,6 @@ function formulario(evt){
 }; 
 
 
-
-/* const submitFormulario = document.querySelector(".botonProductoCompra")
-let todosInputs = document.querySelectorAll(".inputObligatorio")
-submitFormulario.addEventListener("click", validarForm)
-
-
-
-function validarForm() {
-  if (todosInputs !== ""){
-    Swal.fire({
-      position: 'top-end',
-      icon: 'success',
-      title: 'Gracias por compra en unapatilla',
-      showConfirmButton: false,
-      timer:2500
-    })
-  } else {
-    Swal.fire({
-      icon: 'error',
-      title: 'Oops...',
-      text: 'Por favor completa todo los campos solicitados',
-    })
-  }
-  
-} */
-
 const form = document.querySelector('.needs-validation');
 const inputs = document.querySelectorAll('.inputObligatorio');
 
@@ -333,11 +305,8 @@ form.addEventListener('submit', function (event) {
     inputs.forEach(input => {
         if (!input.value.trim()) {
             input.classList.add('is-invalid');
-            //input.nextElementSibling.classList.add('invalid-feedback');
-            //input.nextElementSibling.innerText = 'Este campo es obligatorio';
         } else {
             input.classList.remove('is-invalid');
-            //input.nextElementSibling.classList.remove('invalid-feedback');
             completedCount++;
         }
     });
