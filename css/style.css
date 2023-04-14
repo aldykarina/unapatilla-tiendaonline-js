@@ -412,7 +412,8 @@ header nav{
 
 @media screen and (max-width: 1190px){
     .almacenProductos div a img{
-        width: 100%;
+        width: 230px;
+        height: 230px;
     }
 }
 
@@ -423,11 +424,60 @@ header nav{
     .almacenTitulo p {
         font-size: 1rem;
     }
-    .almacenProductos div a{
+    .botonRosa{
         font-size: 1rem;
     }
     .almacenProductos div a img{
+        width: 180px;
+        height: 180px;
+    }
+    .almacenProductos div a{
+        font-size: 1rem;
+    }
+
+}
+
+
+@media screen and (max-width: 550px){
+    .navbar-brand img{
+        width: 200px;
+    }
+
+    .botonRosa{
+        font-size: 1.2rem;
+    }
+
+    .almacenProductos div a img{
+        width: 100px;
+        height: 100px;
+    }
+
+    .almacenProductos div h2{
+        font-size: 1.2rem;
+    }
+
+    .almacenProductos div p{
+        font-size: 1.2rem;
+    }
+    .footerLogos a img {
+        height: 20px;
+    }
+
+    .footerLogosContactanos img{
+        height: 20px;
+    }
+}
+
+@media screen and (max-width: 370px){
+    .navbar-brand img{
         width: 150px;
     }
 
+    .almacenProductos div a img{
+        width: 70px;
+        height: 70px;
+    }
+    .botonRosa{
+        font-size: 1rem;
+    }
 }

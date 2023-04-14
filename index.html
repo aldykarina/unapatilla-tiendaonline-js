@@ -87,10 +87,7 @@
                 <div class="col-md-5 col-lg-4 order-md-last">
                     <h4 class="mb-3">Comentarios acerca del producto</h4>
                     <small class="text-muted">Si tiene algun comentario adicional para tomar en cuenta sobre el producto puede dejarlo por acá, gracias!</small>
-                    <textarea name=""class="form-control" id="" cols="30" rows="10" placeholder="" required></textarea>
-                    <div class="invalid-feedback">
-                         Security code required
-                    </div>
+                    <textarea name=""class="form-control" id="" cols="30" rows="10" placeholder="" ></textarea>
                 </div>
             
 
@@ -102,7 +99,7 @@
                                 <label for="firstName" class="form-label">Nombre</label>
                                 <input type="text" class="form-control inputObligatorio" id="firstName" placeholder="" value="" required>
                                 <div class="invalid-feedback">
-                                    Valid first name is required.
+                                    Nombre es obligatorio
                                 </div>
                             </div>
 
@@ -110,23 +107,31 @@
                                 <label for="lastName" class="form-label">Apellido</label>
                                 <input type="text" class="form-control inputObligatorio" id="lastName" placeholder="" value="" required>
                                 <div class="invalid-feedback">
-                                    Valid last name is required.
+                                    Apellido es obligatorio.
                                 </div>
                             </div>
 
                             <div class="col-12">
-                                <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
+                                <label for="email" class="form-label">Email</label>
                                 <input type="email" class="form-control inputObligatorio" id="email" placeholder="you@gmail.com" value="" required >
                                 <div class="invalid-feedback">
-                                    Please enter a valid email address for shipping updates.
+                                    Por favor ingrese email valido
                                 </div>
                             </div>
 
                             <div class="col-12">
-                                <label for="address" class="form-label">Dirección</label>
+                                <label for="phone" class="form-label">Teléfono</label>
+                                <input type="tel" name="phone" pattern="\([0-9]{3}\) [0-9]{3}[ -][0-9]{4}" class="form-control inputObligatorio" id="phone" placeholder="+54 xxxxxxxxxx" title="Ingrese número valido" required >
+                                <div class="invalid-feedback">
+                                    Por favor ingrese número de teléfono
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="address" class="form-label">Dirección<span class="text-muted"> (de entrega)</span></label>
                                 <input type="text" class="form-control inputObligatorio" id="address" placeholder="Calle 1234 Ciudad" value=""  required>
                                 <div class="invalid-feedback">
-                                    Please enter your shipping address.
+                                    Por favor ingrese dirección de entrega
                                 </div>
                             </div>
 
@@ -134,16 +139,9 @@
                                 <label for="zip" class="form-label">Código Postal</label>
                                 <input type="text" class="form-control inputObligatorio" id="zip" placeholder="" value="" required>
                                 <div class="invalid-feedback">
-                                    Zip code required.
+                                    Código postal es obligatorio
                                 </div>
                             </div>
-                        </div>
-
-                        <hr class="my-4">
-
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="same-address">
-                            <label class="form-check-label" for="same-address">La dirección de entrega es la misma de factuación</label>
                         </div>
 
                         <hr class="my-4">
@@ -152,15 +150,15 @@
 
                         <div class="my-3">
                             <div class="form-check">
-                                <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
+                                <input id="efectivo" name="paymentMethod" type="radio" class="form-check-input" checked required>
                                 <label class="form-check-label" for="credit">Efectivo</label>
                             </div>
                             <div class="form-check">
-                                <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+                                <input id="transferencia" name="paymentMethod" type="radio" class="form-check-input" required>
                                 <label class="form-check-label" for="debit">Transferencia</label>
                             </div>
                             <div class="form-check">
-                                <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
+                                <input id="mercadopago" name="paymentMethod" type="radio" class="form-check-input" required>
                                 <label class="form-check-label" for="paypal">Mercadopago</label>
                             </div>
                         </div>

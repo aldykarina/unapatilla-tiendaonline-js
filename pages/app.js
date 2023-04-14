@@ -329,6 +329,7 @@ const inputs = document.querySelectorAll('.inputObligatorio');
 
 form.addEventListener('submit', function (event) {
     event.preventDefault();
+    let completedCount = 0;
     inputs.forEach(input => {
         if (!input.value.trim()) {
             input.classList.add('is-invalid');
@@ -336,18 +337,20 @@ form.addEventListener('submit', function (event) {
             //input.nextElementSibling.innerText = 'Este campo es obligatorio';
         } else {
             input.classList.remove('is-invalid');
-            input.nextElementSibling.classList.remove('invalid-feedback');
-
-            Swal.fire({
-
-              icon: 'success',
-              title: 'Gracias por comprar en unapatilla',
-              footer: '<p>Nos estaremos comunicando por mail para concretar el pago y coordinar el envio.</p>',
-              showConfirmButton: true
-            })
-
+            //input.nextElementSibling.classList.remove('invalid-feedback');
+            completedCount++;
         }
     });
+    if (completedCount === inputs.length) {
+      Swal.fire({
+        icon: 'success',
+        title: 'Gracias por comprar en unapatilla',
+        showConfirmButton: true
+      })
+    }
 });
+
+
+
 
 
