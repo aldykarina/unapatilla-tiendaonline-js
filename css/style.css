@@ -481,3 +481,37 @@ header nav{
         font-size: 1rem;
     }
 }
+
+@media screen and (max-width: 318px){
+    .navbar-brand img{
+        width: 100px;
+    }
+
+    .almacenProductos div a img{
+        width: 50px;
+        height: 50px;
+    }
+    .botonRosa{
+        font-size: 0.8rem;
+    }
+
+    .almacenTitulo h1{
+        font-size: 1.2rem;
+    }
+    .almacenTitulo h1{
+        font-size: 1rem;
+    }
+
+    .almacenProductos div a{
+        font-size: 0.8rem;
+    }
+
+    .almacenProductos div h2{
+        font-size: 1rem;
+    }
+
+    .almacenProductos div p{
+        font-size: 1rem;
+    }
+}
+
