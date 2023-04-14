@@ -188,7 +188,7 @@ function vaciarCarrito(){
       calcularTotal();
       localSt();
       formularioHtml.style.display = 'none'
-      
+      closeCart()
       Swal.fire(
         'Carrito Vacio'
       )
@@ -314,6 +314,7 @@ form.addEventListener('submit', function (event) {
       Swal.fire({
         icon: 'success',
         title: 'Gracias por comprar en unapatilla',
+        footer: "<p>Nos estaremos comunicando por mail para coordinar pago y entrega.</p>",
         showConfirmButton: true
       })
     }
